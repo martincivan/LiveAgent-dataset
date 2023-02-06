@@ -1,0 +1,7 @@
+certifi==2022.12.7
+-e git+https://github.com/QualityUnit/LiveAgent-api-python@b2bd8a1d43294996b7560e7dc99b806c7acaa87d#egg=liveagent_api
+python-dateutil==2.8.2
+six==1.16.0
+urllib3==1.26.14
+
+python-dotenv~=0.21.1
