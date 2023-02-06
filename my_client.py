@@ -9,10 +9,11 @@ configuration = Configuration()
 configuration.host = os.getenv("HOST")
 configuration.api_key['apikey'] = os.getenv("API_KEY")
 
-
+# HACK: because LiveAgent return empty string in case of empty date
 class MyClient(ApiClient):
     def _ApiClient__deserialize_datatime(self, string):
         if not string:
+            # Ignore
             return None
         try:
             from dateutil.parser import parse
